@@ -1,0 +1,33 @@
+appId: com.clinic.settings
+name: Clinic Settings Flow
+tags:
+  - e2e
+---
+- openLink: "clinic-settings://"
+
+- waitForAnimationToEnd:
+    timeout: 5000
+
+- tapOn:
+    text: "Open"
+
+- waitForAnimationToEnd:
+    timeout: 30000
+
+- tapOn:
+    id: "clinic-name-input"
+
+- eraseText
+
+- inputText:
+    text: "Test Clinic"
+    id: "clinic-name-input"
+
+- hideKeyboard
+
+- waitForAnimationToEnd:
+    timeout: 1000
+
+- tapOn:
+    text: "Save"
+    enabled: true
