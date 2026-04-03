@@ -12,6 +12,7 @@ export default function RootLayout() {
           headerStyle: {
             backgroundColor: theme.colors.cardBackground,
           },
+          headerTitleAlign: "center",
           headerTintColor: theme.colors.primary,
           headerTitleStyle: {
             fontSize: fontSize.lg,
