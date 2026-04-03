@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Keyboard,
   ScrollView,
   StyleProp,
   StyleSheet,
@@ -9,7 +8,6 @@ import {
 } from "react-native";
 import { colors } from "@/theme";
 import KeyboardAwareView from "./KeyboardAwareView";
-import { isIOS } from "@/utils/platform";
 
 interface ScreenProps {
   children: React.ReactNode;
@@ -29,7 +27,7 @@ export function Screen({
   keyboardVerticalOffset = 0,
 }: ScreenProps) {
   const scrollContainerStyle = [styles.scrollContainer, style];
-  const staticContainerStyle = [styles.staticContainer, style];
+  const staticContainerStyle = [styles.screen, style];
 
   if (disableKeyboardAvoiding) {
     if (!scrollable) {
@@ -41,7 +39,6 @@ export function Screen({
         style={styles.screen}
         contentContainerStyle={[styles.scrollContent, contentContainerStyle]}
         keyboardShouldPersistTaps="handled"
-        keyboardDismissMode={isIOS ? "interactive" : "on-drag"}
       >
         <View style={scrollContainerStyle}>{children}</View>
       </ScrollView>
@@ -69,8 +66,6 @@ export function Screen({
         contentContainerStyle={[styles.scrollContent, contentContainerStyle]}
         keyboardShouldPersistTaps="handled"
         automaticallyAdjustKeyboardInsets
-        keyboardDismissMode={isIOS ? "interactive" : "on-drag"}
-        onScrollBeginDrag={Keyboard.dismiss}
         scrollEventThrottle={16}
       >
         <View style={scrollContainerStyle}>{children}</View>
@@ -81,10 +76,6 @@ export function Screen({
 
 const styles = StyleSheet.create({
   screen: {
-    flex: 1,
-    backgroundColor: colors.background,
-  },
-  staticContainer: {
     flex: 1,
     backgroundColor: colors.background,
   },

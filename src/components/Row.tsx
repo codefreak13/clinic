@@ -1,15 +1,16 @@
-import React from 'react';
-import { View, StyleSheet, Platform } from 'react-native';
-import { Text } from '@/components/Text';
-import { TextInput } from '@/components/TextInput';
-import { fontSize, spacing, sizes, colors } from '@/theme';
+import React from "react";
+import { View, StyleSheet } from "react-native";
+import { Text } from "@/components/Text";
+import { TextInput } from "@/components/TextInput";
+import { fontSize, spacing, sizes, colors } from "@/theme";
+import { isIOS } from "@/utils/platform";
 
 interface RowProps {
   label: string;
   value: string;
   onChangeText: (text: string) => void;
   placeholder?: string;
-  keyboardType?: 'default' | 'phone-pad';
+  keyboardType?: "default" | "phone-pad";
   testID?: string;
   showSeparator?: boolean;
   prefix?: string;
@@ -21,7 +22,7 @@ export function Row({
   value,
   onChangeText,
   placeholder,
-  keyboardType = 'default',
+  keyboardType = "default",
   testID,
   showSeparator = true,
   prefix,
@@ -53,8 +54,8 @@ const styles = StyleSheet.create({
     minHeight: sizes.rowHeight,
   },
   row: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     minHeight: sizes.rowHeight,
     paddingHorizontal: spacing.lg,
   },
@@ -72,8 +73,8 @@ const styles = StyleSheet.create({
     flex: 1,
     fontSize: fontSize.lg,
     color: colors.text,
-    textAlign: 'right',
-    paddingVertical: Platform.OS === 'ios' ? spacing.md : spacing.sm,
+    textAlign: "right",
+    paddingVertical: isIOS ? spacing.md : spacing.sm,
   },
   inputDisabled: {
     color: colors.placeholder,

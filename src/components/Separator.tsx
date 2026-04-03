@@ -1,6 +1,6 @@
-import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import { spacing, sizes, colors } from '@/theme';
+import React from "react";
+import { View, StyleSheet } from "react-native";
+import { spacing, sizes, colors } from "@/theme";
 
 export function Separator() {
   return <View style={styles.separator} />;

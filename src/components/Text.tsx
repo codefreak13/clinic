@@ -1,25 +1,29 @@
-import React from 'react';
-import { Text as RNText, TextProps as RNTextProps, StyleSheet, TextStyle } from 'react-native';
-import { fontSize, spacing, typography, colors } from '@/theme';
+import React from "react";
+import {
+  Text as RNText,
+  TextProps as RNTextProps,
+  StyleSheet,
+} from "react-native";
+import { fontSize, spacing, typography, colors } from "@/theme";
 
-type TextVariant = 'heading' | 'subheading' | 'body' | 'caption' | 'label';
-type TextWeight = 'regular' | 'medium' | 'semibold' | 'bold';
+type TextVariant = "heading" | "subheading" | "body" | "caption" | "label";
+type TextWeight = "regular" | "medium" | "semibold" | "bold";
 
 interface TextProps extends RNTextProps {
   children: React.ReactNode;
   variant?: TextVariant;
   weight?: TextWeight;
   color?: string;
-  align?: 'left' | 'center' | 'right';
+  align?: "left" | "center" | "right";
   numberOfLines?: number;
 }
 
 export function Text({
   style,
-  variant = 'body',
-  weight = 'regular',
+  variant = "body",
+  weight = "regular",
   color,
-  align = 'left',
+  align = "left",
   numberOfLines,
   children,
   ...props

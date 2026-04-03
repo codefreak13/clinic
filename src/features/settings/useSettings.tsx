@@ -1,5 +1,6 @@
-import { useForm, UseFormReturn } from "react-hook-form";
 import { useCallback, useLayoutEffect, useMemo } from "react";
+import { Keyboard } from "react-native";
+import { useForm, UseFormReturn } from "react-hook-form";
 import { useNavigation } from "expo-router";
 import { Button } from "@/components/Button";
 import { defaultClinicFormData, ClinicFormData } from "./interfaces";
@@ -26,6 +27,7 @@ export function useSettings(): UseSettingsReturn {
   }, [isDirty, formValues]);
 
   const handleSave = useCallback(() => {
+    Keyboard.dismiss();
     reset(formValues);
   }, [formValues, reset]);
 

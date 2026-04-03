@@ -1,12 +1,12 @@
 import { Stack } from "expo-router";
-import { StatusBar } from "expo-status-bar";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { fontSize, typography, theme } from "@/theme";
+import { SystemBars } from "react-native-edge-to-edge";
 
 export default function RootLayout() {
   return (
     <SafeAreaProvider>
-      <StatusBar style="dark" />
+      <SystemBars style="dark" />
       <Stack
         screenOptions={{
           headerStyle: {

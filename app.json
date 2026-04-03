@@ -25,15 +25,41 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.clinic.settings"
+      "edgeToEdgeEnabled": true,
+      "package": "com.clinic.settings",
+      "softwareKeyboardLayoutMode": "pan",
+      "statusBar": {
+        "style": "dark",
+        "translucent": true,
+        "backgroundColor": "#ffffff"
+      },
+      "navigationBar": {
+        "style": "dark",
+        "translucent": true,
+        "backgroundColor": "#ffffff"
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png",
       "bundler": "metro"
     },
-    "plugins": ["expo-router"],
+    "plugins": [
+      "expo-router",
+      [
+        "react-native-edge-to-edge",
+        {
+          "android": {
+            "parentTheme": "Default",
+            "enforceNavigationBarContrast": true
+          }
+        }
+      ]
+    ],
     "extra": {
-      "router": {}
+      "router": {},
+      "eas": {
+        "projectId": "b85693eb-8bcc-4700-bc73-916b346cbd18"
+      }
     }
   }
 }

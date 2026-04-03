@@ -1,6 +1,6 @@
-import React from 'react';
-import { View, StyleSheet, ViewStyle } from 'react-native';
-import { borderRadius, colors } from '@/theme';
+import React from "react";
+import { View, StyleSheet, ViewStyle } from "react-native";
+import { borderRadius, colors } from "@/theme";
 
 interface CardProps {
   children: React.ReactNode;
@@ -15,6 +15,6 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: colors.cardBackground,
     borderRadius: borderRadius.md,
-    overflow: 'hidden',
+    overflow: "hidden",
   },
 });

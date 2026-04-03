@@ -1,4 +1,4 @@
-import { normalize } from '@/utils/scale';
+import { normalize } from "@/utils/scale";
 
 export const fontSize = {
   xs: normalize(10),
@@ -11,10 +11,10 @@ export const fontSize = {
 } as const;
 
 export const fontWeight = {
-  regular: '400',
-  medium: '500',
-  semibold: '600',
-  bold: '700',
+  regular: "400",
+  medium: "500",
+  semibold: "600",
+  bold: "700",
 } as const;
 
 export const lineHeight = {
@@ -29,7 +29,7 @@ export const letterSpacing = {
   wide: 0.5,
 } as const;
 
-export const textColor = '#000000';
+export const textColor = "#000000";
 
 export const typography = {
   fontSize,
