@@ -126,8 +126,8 @@ const styles = StyleSheet.create({
     opacity: 0.6,
   },
   small: {
-    paddingHorizontal: spacing.md,
-    paddingVertical: spacing.xs,
+    paddingHorizontal: spacing.lg,
+    paddingVertical: spacing.xsm,
   },
   smallText: {
     fontSize: spacing.md,

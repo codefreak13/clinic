@@ -39,7 +39,7 @@ export function useSettings(): UseSettingsReturn {
           onPress={handleSave}
           disabled={!canSave}
           title="Save"
-          size="medium"
+          size="small"
         />
       ),
     });

@@ -27,7 +27,7 @@
       },
       "edgeToEdgeEnabled": true,
       "package": "com.clinic.settings",
-      "softwareKeyboardLayoutMode": "pan",
+      "softwareKeyboardLayoutMode": "resize",
       "statusBar": {
         "style": "dark",
         "translucent": true,
